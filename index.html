@@ -6,6 +6,16 @@
   <title>Pixel Site Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+ <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "lQb0rUDc0h1WRHwpx",
+      });
+   })();
+</script>
 </head>
 <body>
   <nav class="navbar">
@@ -13,25 +23,24 @@
     <button id="mode-toggle" class="mode-toggle">🌓</button>
     <button class="menu-toggle" id="menu-toggle">&#9776;</button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a id="navHome" href="#">Home</a></li>
+      <li><a id="navProject" href="#">Projects</a></li>
+      <li><a id="navBlog" href="#">Blog</a></li>
+      <li><a id="navContact" href="#">Contact</a></li>
     </ul>
 
   </nav>
+  <main></main>
+  <footer class="footer">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input id="from-name" type="text" name="from-name" placeholder="Your name" required />
+      <input id="reply-to" type="email" name="reply-to" placeholder="Your email" required />
+      <textarea id="contact-message" name="message" placeholder="Your message"  required></textarea>
+      <button id ="sendBtn">Send</button>
+    </form>
+  </footer>
 </body>
-<script>
-const menuBtn = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-  const modeBtn = document.getElementById('mode-toggle');
 
-  menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-
-  modeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-  });
-</script>
+<script type="module" src="./js.js"></script>
 </html>
