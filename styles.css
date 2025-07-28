@@ -1,0 +1,106 @@
+:root {
+  --bg-color: #FFFDEB;
+  --text-color: #2E2E2E;
+  --accent1: #00E5FF;
+  --accent2: #FF4081;
+  --border-color: #CCCCCC;
+}
+#highlight{
+    color: var(--accent2);
+}
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--text-color);
+  color: var(--accent1);
+}
+
+.logo {
+  color: var(--accent2);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--accent1);
+  font-size: 0.7rem;
+    padding-bottom: 5px;
+      &:hover{
+          border-bottom: 2px solid var(--accent2);
+      }
+    
+}
+.nav-links li{
+    
+}
+
+.mode-toggle {
+  
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--accent2);
+  cursor: pointer;
+margin-left: auto;
+}
+
+.menu-toggle
+ {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--accent2);
+  cursor: pointer;
+/*     border: 2px solid var(--bg-color);*/
+    
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      box-sizing: border-box;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--text-color);
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+
+}
+
+/* Dark mode class */
+.dark-mode {
+  --bg-color: #1A1A1A;
+  --text-color: #EDEDED;
+  --accent1: #1A1A1A;
+  --accent2: #FF2E88;
+  --border-color: #444444;
+}
