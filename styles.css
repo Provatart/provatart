@@ -25,6 +25,7 @@ body {
   padding: 1rem 2rem;
   background-color: var(--text-color);
   color: var(--accent1);
+  z-index: 5;
 }
 
 .logo {
@@ -119,8 +120,11 @@ margin-left: auto;
   margin: 0 auto;
 }
 main {
-  height: 1000px;
+  /* height: 1000px; */
+  display: flex;
+  flex-direction: column;
 }
+
 #contact-form input,
 #contact-form textarea {
   font-family: 'Press Start 2P', cursive;
@@ -160,7 +164,7 @@ main {
   --border-color: #444444;
 }
 main {
-  display: flex;
+  
 }
 #avatar-container {
   position:relative;
@@ -179,7 +183,7 @@ main {
   top: 0;
   left: 0;
   z-index: 1;
-  animation: spin 45s linear infinite;
+  animation: spin 200s linear infinite;
 }
 #front-img {
   position: absolute;
@@ -198,4 +202,23 @@ main {
   to {
     transform: rotate(360deg);
   }
+}
+p {
+  font-family: "Roboto";
+  font-size: large;
+  font-weight: 600;
+}
+section h2 {
+  
+}
+section {
+  max-width: 800px;
+  padding: 30px;
+  margin: 20px auto;
+}
+.side-note {
+  border-left: 4px solid var(--accent2);
+  margin-left: 40px;
+  font-style: italic;
+  padding: 10px
 }
