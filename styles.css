@@ -123,6 +123,7 @@ main {
   /* height: 1000px; */
   display: flex;
   flex-direction: column;
+  border: 1px solid black;;
 }
 
 #contact-form input,
@@ -168,8 +169,9 @@ main {
 }
 #avatar-container {
   position:relative;
+  max-width: 100%;
   width: 500px;
-  height: 500px;
+  /* height: 500px; */
  
  overflow: hidden;
    display: inline-block;
