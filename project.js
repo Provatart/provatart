@@ -1,4 +1,4 @@
-  (function() {
+ (function() {
     emailjs.init("lQb0rUDc0h1WRHwpx"); 
   })();
 
@@ -16,17 +16,47 @@
   const navProject = document.querySelector("#navProject");
 
   const contactForm = document.querySelector('#contact-form');
-  const accordeonItemHeader = document.querySelector(".accordeonItemHeader");
-  const accordeonItemBody = document.querySelector(".accordeonItemBody");
-  
-  
-  //event handlers
+const ipBtn = document.querySelector('#ipBtn');  
+const ipHeadBtn = document.querySelector('#ipHeadBtn');
+const background = document.querySelector('#background');
+const output = document.querySelector('#output');
 
-  accordeonItemHeader.addEventListener('click',(e)=>{
-  accordeonItemHeader.innerHTML = (accordeonItemHeader.innerHTML==='⬇️  Обо мне'?'➡️  Обо мне':'⬇️  Обо мне');
-  accordeonItemBody.style.display = (accordeonItemBody.style.display==='block'?'none':'block');
-});
+//events handlers
+ipHeadBtn.addEventListener('click', ()=>{
+    
+    fetch('http://31.56.240.83:1987')
+  .then(response => response.json())
+  .then(data => {
+    output.innerHTML=`Ваш IP: ${data.ip}`;
+    background.style.display = 'flex';
+     })
+  .catch(error => {
+        output.innerHTML=`${error}`;
+        background.style.display = 'flex';
+  });
 
+
+
+  });
+ipBtn.addEventListener('click', ()=>{
+    
+    fetch('http://31.56.240.83:1987')
+  .then(response => response.json())
+  .then(data => {
+    output.innerHTML=`Ваш IP: ${data.ip}`;
+    background.style.display = 'flex';
+     })
+  .catch(error => {
+        output.innerHTML=`${error}`;
+        background.style.display = 'flex';
+  });
+
+
+
+  });
+  background.addEventListener('click',()=>{
+    background.style.display = 'none';
+  });
   navContact.addEventListener('click',(e)=>{
     navLinks.classList.toggle('active');
     contactForm.scrollIntoView({
