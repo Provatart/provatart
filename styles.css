@@ -22,7 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   background-color: var(--text-color);
   color: var(--accent1);
   z-index: 5;
@@ -100,7 +100,7 @@ margin-left: auto;
 }
 
 .footer {
-  background-color: var(--bg-color);
+  background-color: var(--text-color);
   color: var(--accent2);
   padding: 2rem;
   text-align: center;
@@ -118,6 +118,7 @@ margin-left: auto;
   gap: 0.9rem;
   max-width: 400px;
   margin: 0 auto;
+  
 }
 main {
   /* height: 1000px; */
@@ -129,7 +130,7 @@ main {
 #contact-form input,
 #contact-form textarea {
   font-family: 'Press Start 2P', cursive;
-  color: var(--text-color);
+  color: var(--bg-color);
   padding: 0.5rem;
   font-size: 0.8rem;
   border: 2px solid var(--input-border);
@@ -173,7 +174,7 @@ main {
   width: 500px;
   /* height: 500px; */
  
- overflow: hidden;
+ /* overflow: hidden; */
    display: inline-block;
   
   margin: 10px auto; 
@@ -223,4 +224,12 @@ section {
   margin-left: 40px;
   font-style: italic;
   padding: 10px
+}
+.thinText {
+  font-weight: 300;
+  text-align: right;
+  display:block;
+  /* font-style: normal; */
+  font-size: 100%;
+  padding-top: 10px;;
 }

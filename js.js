@@ -14,7 +14,7 @@
   const navContact = document.querySelector("#navContact");
   const navHome = document.querySelector("#navHome");
   const navProject = document.querySelector("#navProject");
-  const navBlog = document.querySelector("#navBlog");
+//   const navBlog = document.querySelector("#navBlog");
   const contactForm = document.querySelector('#contact-form');
   //event handlers
   navContact.addEventListener('click',(e)=>{
@@ -30,11 +30,11 @@
   navProject.addEventListener('click',(e)=>{
     navLinks.classList.toggle('active');
     })
-  navBlog.addEventListener('click',(e)=>{
-    navLinks.classList.toggle('active');
-    })
+//   navBlog.addEventListener('click',(e)=>{
+//     navLinks.classList.toggle('active');
+//     })
 
-  sendBtn.addEventListener('click', (e)=>{e.preventDefault(); sendEmail()});
+  sendBtn.addEventListener('click', (e)=>{e.preventDefault(); if (replyTo.value !== ''){sendEmail()}else{console.log('empty field'); replyTo.style.borderColor = "red";}});
   menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
