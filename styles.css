@@ -216,8 +216,10 @@ section h2 {
 }
 section {
   max-width: 800px;
+  width: 85%;
   padding: 30px;
   margin: 20px auto;
+  /* border: 1px solid black */
 }
 .side-note {
   border-left: 4px solid var(--accent2);
@@ -232,4 +234,15 @@ section {
   /* font-style: normal; */
   font-size: 100%;
   padding-top: 10px;;
+}
+.links {
+  text-align: right;
+  
+}
+.accordeonItemBody {
+  display: none;
+}
+.accordeonItem {
+  cursor: pointer;
+  /* border: 2px solid purple; */
 }

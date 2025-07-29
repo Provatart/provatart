@@ -16,7 +16,16 @@
   const navProject = document.querySelector("#navProject");
 //   const navBlog = document.querySelector("#navBlog");
   const contactForm = document.querySelector('#contact-form');
+  const accordeonItemHeader = document.querySelector(".accordeonItemHeader");
+const accordeonItemBody = document.querySelector(".accordeonItemBody");
+  
+  
   //event handlers
+  accordeonItemHeader.addEventListener('click',(e)=>{
+  accordeonItemHeader.innerHTML = (accordeonItemHeader.innerHTML==='⬇️  Обо мне'?'➡️  Обо мне':'⬇️  Обо мне');
+  accordeonItemBody.style.display = (accordeonItemBody.style.display==='block'?'none':'block');
+});
+
   navContact.addEventListener('click',(e)=>{
     navLinks.classList.toggle('active');
     contactForm.scrollIntoView({
@@ -33,8 +42,23 @@
 //   navBlog.addEventListener('click',(e)=>{
 //     navLinks.classList.toggle('active');
 //     })
+replyTo.addEventListener('input',()=>{
+    replyTo.style.outline =  ((replyTo.value==='') ? "2px solid var(--accent2)" : "none");
+   
+})
+  sendBtn.addEventListener('click', (e)=>{
+    e.preventDefault(); 
+    if (replyTo.value !== ''){
+        sendEmail();
+        fromName.value='';
+        contactMessage.value='';
+        replyTo.value='';
+        replyTo.style.outline = "none";
 
-  sendBtn.addEventListener('click', (e)=>{e.preventDefault(); if (replyTo.value !== ''){sendEmail()}else{console.log('empty field'); replyTo.style.borderColor = "red";}});
+
+    }else{
+        replyTo.style.outline = "2px solid var(--accent2)";
+        replyTo.focus();}});
   menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
