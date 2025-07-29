@@ -261,9 +261,9 @@ section {
 }
 
 .card {
-  flex: 1 1 400px;         /* grow, shrink, base size */
+  flex: 1 1 350px;         /* grow, shrink, base size */
   max-width: 600px;
-  min-width: 400px;
+  min-width: 350px;
   height: 200px;
   box-shadow: 5px 5px var(--text-color);
   background: var(--bg-color);
@@ -279,6 +279,7 @@ section {
 .card h1{
   text-align: center;
   margin-top: 40px;
+  font-size: 1.75rem;
 }
 .card .links {
   position: absolute;

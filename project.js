@@ -20,40 +20,27 @@ const ipBtn = document.querySelector('#ipBtn');
 const ipHeadBtn = document.querySelector('#ipHeadBtn');
 const background = document.querySelector('#background');
 const output = document.querySelector('#output');
+//functions
+const getIp = ()=>{
+    window.open('http://31.56.240.83:1987', '_blank');
+    //если бы сервер был https, работало бы это
+    //     fetch('http://31.56.240.83:1987')
+    //      .then(response => response.json())
+    //      .then(data => {
+    //          output.innerHTML=`Ваш IP: ${data.ip}`;
+    //          background.style.display = 'flex';
+    //            })
+    //      .catch(error => {
+    //          output.innerHTML=`${error}`;
+    //          background.style.display = 'flex';
+    //          });
 
+
+
+  };
 //events handlers
-ipHeadBtn.addEventListener('click', ()=>{
-    
-    fetch('http://31.56.240.83:1987')
-  .then(response => response.json())
-  .then(data => {
-    output.innerHTML=`Ваш IP: ${data.ip}`;
-    background.style.display = 'flex';
-     })
-  .catch(error => {
-        output.innerHTML=`${error}`;
-        background.style.display = 'flex';
-  });
-
-
-
-  });
-ipBtn.addEventListener('click', ()=>{
-    
-    fetch('http://31.56.240.83:1987')
-  .then(response => response.json())
-  .then(data => {
-    output.innerHTML=`Ваш IP: ${data.ip}`;
-    background.style.display = 'flex';
-     })
-  .catch(error => {
-        output.innerHTML=`${error}`;
-        background.style.display = 'flex';
-  });
-
-
-
-  });
+ipHeadBtn.addEventListener('click', getIp );
+ipBtn.addEventListener('click', getIp);
   background.addEventListener('click',()=>{
     background.style.display = 'none';
   });
