@@ -261,9 +261,9 @@ section {
 }
 
 .card {
-  flex: 1 1 300px;         /* grow, shrink, base size */
+  flex: 1 1 400px;         /* grow, shrink, base size */
   max-width: 600px;
-  min-width: 300px;
+  min-width: 400px;
   height: 200px;
   box-shadow: 5px 5px var(--text-color);
   background: var(--bg-color);
